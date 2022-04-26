@@ -1,4 +1,4 @@
-Feature: Generic types
+﻿Feature: Generic types
 
     Types can take an arbitrary amount of type arguments inside <> brackets.
 
@@ -7,8 +7,6 @@ Feature: Generic types
             """
             class Collection<T> {}
             """
-        When the code is compiled
-        Then there are no errors
 
     Scenario: Generic type can be used in declaration
         Given the main function contains the following code:
