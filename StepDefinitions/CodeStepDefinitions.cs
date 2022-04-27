@@ -14,7 +14,7 @@ namespace BcakeAcceptanceTests.StepDefinitions
             _parserContext = parserContext;
         }
 
-        [Given(@"the following class is defined:")]
+        [Given(@"the following class|function is defined:")]
         public void GivenTheFollowingClassIsDefined(string multilineText)
         {
             _parserContext.AddCode(multilineText);

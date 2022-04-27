@@ -15,9 +15,15 @@ namespace BcakeAcceptanceTests.StepDefinitions
         }
 
         [Then(@"""([^""]*)"" evaluates to ([0-9]+)")]
-        public void ThenEvaluatesTo(string name, string value)
+        public void ThenEvaluatesToInt(string name, string value)
         {
             TestLogCompare<int>(name, value);
+        }
+
+        [Then(@"""([^""]*)"" evaluates to ""([^""]*)""")]
+        public void ThenEvaluatesToString(string name, string value)
+        {
+            TestLogCompare<string>(name, value);
         }
 
         private void TestLogCompare<T>(string name, string expected)

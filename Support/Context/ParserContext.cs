@@ -13,7 +13,7 @@ namespace BcakeAcceptanceTests.Support.Context
 {
     public class ParserContext
     {
-        private const string BCakeExePath = @"D:\Thomas\Projects\bananacake\bin\Debug\netcoreapp5.0\bcake.exe";
+        private string BCakeExePath => AppDomain.CurrentDomain.BaseDirectory + @"..\..\..\..\bananacake\bin\Debug\netcoreapp5.0\bcake.exe";
 
         public bool HasErrors { get; private set; }
         public string? ErrorMessage { get; private set; }
@@ -29,6 +29,9 @@ namespace BcakeAcceptanceTests.Support.Context
             void TEST(string property, int value) {
                 string valStr = value as string;
                 println(""<%%TEST:"" + property + ""%%>"" + valStr + ""</%%TEST%%>"");
+            }
+            void TEST(string property, string value) {
+                println(""<%%TEST:"" + property + ""%%>"" + value + ""</%%TEST%%>"");
             }
         ";
 
@@ -67,7 +70,7 @@ namespace BcakeAcceptanceTests.Support.Context
 
         private void CheckForErrors(string output)
         {
-            var pattern = @"Error( in (.*))?: ((.|\n)*)";
+            var pattern = @"(Internal )?[Ee]rror( in (.*))?: ((.|\n)*)";
             var match = Regex.Match(output, pattern);
             if (!match.Success)
             {
@@ -76,7 +79,7 @@ namespace BcakeAcceptanceTests.Support.Context
                 return;
             }
 
-            var errorStr = match.Groups[3].Value;
+            var errorStr = match.Groups[4].Value;
             HasErrors = true;
             ErrorMessage = errorStr;
         }

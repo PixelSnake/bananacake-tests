@@ -24,6 +24,13 @@ namespace BcakeAcceptanceTests.StepDefinitions
             Assert.IsTrue(_parserContext.HasErrors);
         }
 
+        [Then(@"the error contains ""([^""]*)""")]
+        public void TheErrorContains(string error)
+        {
+            Assert.IsNotNull(_parserContext.ErrorMessage);
+            Assert.IsTrue(_parserContext.ErrorMessage?.Contains(error));
+        }
+
         [Then(@"there are no errors")]
         public void ThenThereAreNoErrors()
         {
