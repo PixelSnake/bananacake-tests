@@ -39,14 +39,21 @@ namespace BcakeAcceptanceTests.StepDefinitions
 
         private void TestLogCompare<T>(string name, string expected, Func<string, T> convert)
         {
+            var found = false;
             var pattern = @"<%%TEST:([^%]+)%%>(.*)</%%TEST%%>";
             var options = RegexOptions.Multiline;
 
             foreach (Match m in Regex.Matches(_parserContext.Output, pattern, options))
             {
                 // Console.WriteLine(m.Groups[1].Value + " = " + m.Groups[2].Value);
-                if (m.Groups[1].Value == name) Assert.AreEqual(convert(expected), convert(m.Groups[2].Value));
+                if (m.Groups[1].Value == name)
+                {
+                    Assert.AreEqual(convert(expected), convert(m.Groups[2].Value));
+                    found = true;
+                }
             }
+
+            Assert.IsTrue(found);
         }
     }
 }

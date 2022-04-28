@@ -23,7 +23,7 @@
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection<int>();
+            new Collection<int>();
             """
         When the code is compiled
         Then there are no errors
@@ -35,13 +35,13 @@
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection<int>();
+            new Collection<int>();
             """
         When the code is compiled
         Then there are no errors
 
     @Error
-    Scenario: Generic type argument can not be omitted in constructor call
+    Scenario: Not providing type argument to constructor returns error
         Given the following class is defined:
             """
             class Collection<T> {
@@ -50,21 +50,21 @@
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection();
+            new Collection();
             """
         When the code is compiled
         Then an error is returned
         And the error contains "Illegal use of generic symbol"
 
     @Error
-    Scenario: Generic type argument can not be omitted in call to default constructor
+    Scenario: Not providing type argument to default constructor returns error
         Given the following class is defined:
             """
             class Collection<T> {}
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection();
+            new Collection();
             """
         When the code is compiled
         Then an error is returned
@@ -81,7 +81,7 @@
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection<int>(1337);
+            new Collection<int>(1337);
             """
         When the code is compiled
         Then there are no errors
@@ -96,20 +96,35 @@
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection<int>(1337);
+            new Collection<int>(1337);
             """
         When the code is compiled
         Then there are no errors
         
-    @Error
-    Scenario: Concrete versions of generic types are treated as different types
+    @Regression
+    Scenario: Assignment of generic types with equal type arguments works
         Given the following class is defined:
             """
             class Collection<T> {}
             """
         And the main function contains the following code:
             """
-            Collection<int> collection = new Collection<string>();
+            Collection<int> collection = new Collection<int>();
+            """
+        When the code is compiled
+        Then there are no errors
+
+    @Regression @Error
+    Scenario: Assignment of generic types with different type arguments does not work
+        Given the following class is defined:
+            """
+            class Collection<T> {}
+            """
+        And the main function contains the following code:
+            """
+            Collection<string> collection = new Collection<int>();
             """
         When the code is compiled
         Then an error is returned
+        And the error contains "cannot be implicitly converted"
+              

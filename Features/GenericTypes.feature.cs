@@ -147,7 +147,7 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {\r\n    public Collection() {}\r\n}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 24
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -190,7 +190,7 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 36
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -203,14 +203,14 @@ namespace BcakeAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Generic type argument can not be omitted in constructor call")]
+        [NUnit.Framework.DescriptionAttribute("Not providing type argument to constructor returns error")]
         [NUnit.Framework.CategoryAttribute("Error")]
-        public virtual void GenericTypeArgumentCanNotBeOmittedInConstructorCall()
+        public virtual void NotProvidingTypeArgumentToConstructorReturnsError()
         {
             string[] tagsOfScenario = new string[] {
                     "Error"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generic type argument can not be omitted in constructor call", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Not providing type argument to constructor returns error", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 44
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -235,7 +235,7 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {\r\n    public Collection() {}\r\n}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 51
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection();", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 55
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -251,14 +251,14 @@ namespace BcakeAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Generic type argument can not be omitted in call to default constructor")]
+        [NUnit.Framework.DescriptionAttribute("Not providing type argument to default constructor returns error")]
         [NUnit.Framework.CategoryAttribute("Error")]
-        public virtual void GenericTypeArgumentCanNotBeOmittedInCallToDefaultConstructor()
+        public virtual void NotProvidingTypeArgumentToDefaultConstructorReturnsError()
         {
             string[] tagsOfScenario = new string[] {
                     "Error"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generic type argument can not be omitted in call to default constructor", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Not providing type argument to default constructor returns error", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 60
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -283,7 +283,7 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 65
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection();", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 69
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -330,7 +330,7 @@ namespace BcakeAcceptanceTests.Features
                         " }\r\n}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 82
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<int>(1337);", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection<int>(1337);", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 86
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -376,7 +376,7 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {\r\n    public Collection(T x) {}\r\n}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 97
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<int>(1337);", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "new Collection<int>(1337);", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 101
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -389,14 +389,14 @@ namespace BcakeAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Concrete versions of generic types are treated as different types")]
-        [NUnit.Framework.CategoryAttribute("Error")]
-        public virtual void ConcreteVersionsOfGenericTypesAreTreatedAsDifferentTypes()
+        [NUnit.Framework.DescriptionAttribute("Assignment of generic types with equal type arguments works")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AssignmentOfGenericTypesWithEqualTypeArgumentsWorks()
         {
             string[] tagsOfScenario = new string[] {
-                    "Error"};
+                    "Regression"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Concrete versions of generic types are treated as different types", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assignment of generic types with equal type arguments works", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 105
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -421,13 +421,63 @@ namespace BcakeAcceptanceTests.Features
         testRunner.Given("the following class is defined:", "class Collection<T> {}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 110
-        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<string>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the main function contains the following code:", "Collection<int> collection = new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 114
         testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 115
+        testRunner.Then("there are no errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Assignment of generic types with different type arguments does not work")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        [NUnit.Framework.CategoryAttribute("Error")]
+        public virtual void AssignmentOfGenericTypesWithDifferentTypeArgumentsDoesNotWork()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression",
+                    "Error"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assignment of generic types with different type arguments does not work", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 118
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 119
+        testRunner.Given("the following class is defined:", "class Collection<T> {}", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 123
+        testRunner.And("the main function contains the following code:", "Collection<string> collection = new Collection<int>();", ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 127
+        testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 128
         testRunner.Then("an error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 129
+        testRunner.And("the error contains \"cannot be implicitly converted\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
