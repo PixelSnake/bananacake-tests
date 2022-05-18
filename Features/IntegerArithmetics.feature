@@ -45,7 +45,7 @@ Scenario: Operator precedence is observed
 Scenario: Parentheses are observed
 	Given the main function contains the following code:
 		"""
-		TEST("result", 3 * (3 + 17) / 3);
+		TEST("result", (3 * (3 + 17)) / 3);
 		"""
 	When the code is compiled
 	Then "result" evaluates to 20

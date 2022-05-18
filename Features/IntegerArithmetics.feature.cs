@@ -301,7 +301,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 46
- testRunner.Given("the main function contains the following code:", "TEST(\"result\", 3 * (3 + 17) / 3);", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the main function contains the following code:", "TEST(\"result\", (3 * (3 + 17)) / 3);", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 50
  testRunner.When("the code is compiled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
