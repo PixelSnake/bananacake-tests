@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\bananacake\bcake.csproj" />
+    <ProjectReference Include="..\bcake-runtime\bcake-runtime.csproj" />
   </ItemGroup>
 
 </Project>
